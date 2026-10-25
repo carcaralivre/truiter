@@ -1,0 +1,22 @@
+{
+  "name": {
+    "pt-BR": "Truiter"
+  },
+  "default_locale": "pt-BR",
+  "summary": {
+    "pt-BR": "Devolve o Twitter cronológico, sem os penduricalhos do X. Abre em \"Seguindo\" por ordem de data, esconde retweets, sugestões, métricas e upsells, usa a largura toda e põe Listas e Configurações na barra lateral."
+  },
+  "description": {
+    "pt-BR": "Extensão para Firefox que devolve o Twitter cronológico, sem os penduricalhos do X.\n\nVersão enxuta do Control Panel for Twitter, só com as funções que uso, sempre ligadas:\n\nTimeline inicial\n- Abre sempre em \"Seguindo\", ordenado pelos mais recentes.\n- Esconde os Retweets, o \"Ver novos Tweets\", o conteúdo sugerido e os avisos no meio da timeline.\n- Conteúdo, mídias e cards em largura total, sem a coluna lateral, em todas as páginas (menos nos resultados de busca, onde fica o campo de pesquisa).\n\nMelhorias\n- Bloqueio sem confirmação; esconde citações e respostas de contas bloqueadas e silenciadas.\n- Nas listas, o menu da lista ganha \"Desativar/Ativar Retweets\".\n- Na página de citações de um tweet, esconde o tweet citado repetido.\n\nCorreções do X\n- Carrossel de mídias antigo, Twemoji, tema escuro \"Lights out\" e selo do Twitter Blue no lugar do selo azul.\n- Esconde visualizações, a aba de seguidores verificados, upsells do Premium, \"Editar imagem\", Vagas, Assinaturas e recursos da NFL.\n- Restaura a origem do tweet, as manchetes dos links e os links de citações e interações.\n- Mostra o país da conta no tweet aberto e no cartão do perfil.\n\nInterface\n- Fonte normal nos menus suspensos e botões Seguir/Seguindo monocromáticos.\n- Esconde a barra lateral, o conteúdo do Explorar, \"Mais deste autor\", sugestões e o botão de escrever tweet.\n- O menu \"Mais\" dá lugar a Listas e Configurações direto na barra lateral; sem gaveta de mensagens nem botão flutuante do Grok.\n\nNenhum dado sai do navegador. A única configuração guardada é a escolha de retweets por lista."
+  },
+  "categories": [
+    "social-communication",
+    "appearance"
+  ],
+  "homepage": {
+    "pt-BR": "https://github.com/carcaralivre/truiter"
+  },
+  "version": {
+    "license": "MIT"
+  }
+}
