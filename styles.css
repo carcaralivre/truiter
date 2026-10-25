@@ -1,0 +1,37 @@
+/* Truiter's own tweaks on top of script.js (which carries the Control Panel
+   for Twitter CSS). The page classes on <body> come from script.js. */
+
+/* The same right edge on every page as on Chat, Calls and Grok. On those
+   pages X wraps the column in a div with padding-right: 70px; script.js
+   already makes main > div span the full width, so the same padding there
+   gives every other page the same gap, and the column keeps its border. */
+body:not(.Search, .Chat, .Calls, .Grok) main[role="main"] > div {
+  box-sizing: border-box !important;
+  padding-right: 70px !important;
+}
+body:not(.Search, .Chat, .Calls, .Grok) div[data-testid="primaryColumn"] {
+  border-right: 1px solid rgb(56, 68, 77) !important; /* Dim */
+}
+body.Default:not(.Search, .Chat, .Calls, .Grok) div[data-testid="primaryColumn"] {
+  border-right-color: rgb(239, 243, 244) !important;
+}
+body.LightsOut:not(.Search, .Chat, .Calls, .Grok) div[data-testid="primaryColumn"] {
+  border-right-color: rgb(47, 51, 54) !important;
+}
+
+/* Explore: no "Try searching for…" box under the field while it is empty.
+   Suggestions still show once something is typed. */
+body.Explore main:has(input[data-testid="SearchBox_Search_Input"]:placeholder-shown) [id^="typeaheadDropdown"] {
+  display: none !important;
+}
+
+/* No floating Grok button in the corner (Grok stays in the nav). The chat
+   drawer next to it is hidden by script.js. */
+div[data-testid="GrokDrawer"] {
+  display: none !important;
+}
+
+/* "More" (a <button>) is replaced by Lists and Settings, added by nav.js. */
+header nav [data-testid="AppTabBar_More_Menu"] {
+  display: none !important;
+}

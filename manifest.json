@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Truiter",
+  "version": "1.11",
+  "description": "Devolve o Twitter cronológico, sem os penduricalhos do X.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "truiter@local",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["nav.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "resources": ["script.js"]
+    }
+  ],
+  "icons": { "48": "icons/truiter.svg", "96": "icons/truiter.svg" }
+}
